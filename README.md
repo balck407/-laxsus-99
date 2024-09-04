@@ -1,6 +1,29 @@
 # Navigate to your script directory
 cd ~/scripts
 
+### 4. **Create a Setup Script (Optional)**
+
+You can also create a `setup.py` file for easier installation. This allows users to install dependencies automatically. Here’s an example setup script:
+
+```python
+from setuptools import setup
+
+setup(
+    name='laxsus-99',
+    version='0.1',
+    py_modules=['laxsus_99'],
+    install_requires=[
+        'requests',
+    ],
+    entry_points={
+        'console_scripts': [
+            'laxsus-99=laxsus_99:main',
+        ],
+    },
+)
+
+
+
 # Initialize git repository if not done already
 git init
 
@@ -15,8 +38,8 @@ git add README.md
 git commit -m "Initial commit"
 
 # Push files to GitHub
-git push -u origin master
 
+ Write Installation Instructions
 
 
 
